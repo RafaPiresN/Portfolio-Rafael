@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
+:root {
+    --cor-principal: rgb(14, 12, 12);
+    --cor-secundaria: cornsilk;
+    --cor-terciaria: brown;
+    --cor-quarta: rgb(248, 230, 184); 
+
+    --fonte-principal: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;   
+    
+}
+
+.cabecalho__menu {
+    gap: 50px;
+    display: flex;
+    
+}
+
+.cabecalho__menu__link {
+    text-decoration: none;
+    padding: 10px 50px;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.125rem;
+    font-weight: 600px;  
+    color: var(--cor-quarta);
+}
+
+.cabecalho__menu__link:hover {
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 6px;
+
+}
+
+.apresentacao {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.apresentacao__conteudo {
+    width: 625px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 1.87rem;
+    padding: 30px;
+    font-family: var(--fonte-principal);
+}
+
+.apresentacao__conteudo__paragrafo{
+    font-size: 1.25rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px ;
+
+}
+.apresentacao__links__subtitulo{
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 1.25rem;
+
+}
+.container__botao {
+    width: 100%;
+    height: 100%;
+}
+
+.container__botao img{
+    width: 80px;
+}
+
+.setaesquerda, .setadireita{
+  position: absolute;
+  top: 80%;
+  
+}
+
+.setadireita{
+  left: 10px; 
+  cursor: pointer;
+  z-index: 1;
+}
+
+.setaesquerda{
+  right:10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.apresentacao__imagens{
+    display: flex;
+    list-style: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.apresentacao__imagens img{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+}
+
+.titulo-destaque {
+    color:rgb(231, 191, 11);
+}
+
+.texto-destaque {
+    color:rgb(143, 40, 40);
+}
+
+footer {
+    background-color: var(--cor-terciaria);
+    padding: 22px 0;
+    font-size: 1.25rem;
+    font-weight: 15px;
+    font-family: var(--fonte-secundaria);
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--cor-quarta);
+       
+}
+
+.footer__linkedin {
+    color: var(--cor-quarta);
+    text-decoration: none;
+    
+}
+
+@media (max-width: 1500px){
+    .apresentacao {
+        flex-direction: column;
+    }
+    .setaesquerda, .setadireita{
+        top: 50%;
+    }
+}
+
+@media (max-width: 950px){
+     .cabecalho {
+        padding: 10%;
+    }
+    .cabecalho__menu{
+        gap: 10px;
+        justify-content: center;
+    }
+    .cabecalho__menu__link{
+        padding: 10%;
+        justify-content: center;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+    }
+}
+
+
+@media (max-width: 800px){
+    .cabecalho__menu {
+        gap: 11px;
+        justify-content:space-evenly;
+        flex-wrap: wrap;
+    }
+    .cabecalho__menu__link{
+        padding: 0%;
+        justify-content: center;
+    }
+    .cabecalho {
+        display: flex;
+        justify-content: center;
+    }
+    .apresentacao__imagens img{
+        width: 100%; 
+    }
+    .container__botao img{
+    width: 30px;
+    }
+    .setadireita {
+        left: 0%;
+    }
+    .setaesquerda{
+        right: 0%;
+    }
+    .setadireita:hover, .setaesquerda:hover{
+        background-color: 0,0,0,1;
+    }
+}
